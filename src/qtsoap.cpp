@@ -687,7 +687,7 @@ QtSoapType::Type QtSoapType::nameToType(const QString &name)
 */
 QString QtSoapType::toString() const
 {
-    return QString::null;
+    return QString();
 }
 
 /*!
@@ -2448,7 +2448,7 @@ bool QtSoapMessage::setContent(const QByteArray &buffer)
     if (!doc.setContent(buffer, true, &errorMsg,
 			&errorLine, &errorColumn)) {
 	QString s;
-	s.sprintf("%s at line %i, column %i", errorMsg.toLatin1().constData(),
+	s.asprintf("%s at line %i, column %i", errorMsg.toLatin1().constData(),
 		  errorLine, errorColumn);
 	setFaultCode(VersionMismatch);
 	setFaultString("XML parse error");
