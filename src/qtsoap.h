@@ -45,7 +45,8 @@
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtCore/QUrl>
 #include <QtCore/QHash>
-#include <QtCore/QLinkedList>
+// #include <QtCore/QLinkedList>
+#include <QLinkedList>
 #include <QtCore/QPointer>
 
 #if defined(Q_OS_WIN) || defined(Q_OS_SYMBIAN)

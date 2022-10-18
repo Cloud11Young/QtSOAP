@@ -41,7 +41,7 @@ ENDFOREACH()
 # Qt
 #
 if(QtSOAP_QT_VERSION VERSION_GREATER "4")
-  find_package(Qt6 COMPONENTS Core Network Xml REQUIRED)
+    find_package(Qt6 COMPONENTS Core Network Xml Core5Compat REQUIRED)
 else()
   find_package(Qt4 4.6 COMPONENTS QtCore QtNetwork QtXml REQUIRED)
   include(${QT_USE_FILE})
